@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bigger Of Two Numbers</title>
+        <script>
+            function compare() { 
+                var x=parseFloat(document.getElementById("fNum").value);
+                var y=parseFloat(document.getElementById("sNum").value);
+                var z;
+                if (x>y) {
+                    z=x;
+                }else{
+                    z=y;
+                } 
+                document.getElementById("demo").value=z;
+            }
+            </script>
+    </head>
+    <body>
+        <label for="fNum">First Number:</label>
+        <input type="text" id="fNum" name="fNum">
+        <label for="sNum" float:>Second Number:</label>
+        <input type="text" id="sNum" name="sNum"><br><br>
+        <button type="button" onclick=compare()>compare</button><br><br>
+        <label for="demo">Bigger Of Gien Numbers:</label>
+        <input type="text" id="demo" readonly>
+
+    </body>
+</html>
