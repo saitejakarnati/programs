@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bigger of n Numbers</title>
+    </head>
+    <body>
+        <script>
+            var num,big=0;
+            var n =prompt("Enter the number of Numbers:");
+            for(i=1; i<=n; i++) {
+                num = (prompt("enter the number:")); 
+                document.write("enter number is:" + num + "<br>");
+                while(num > big) {
+                    big = num;
+                }
+            }
+            document.write("biggest number is:" + big);
+         </script>
+    </body>
+</html>

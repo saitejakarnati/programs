@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bigger Of Three Numbers</title></title>
+        <script>
+            function compare() { 
+                var x=parseFloat(document.getElementById("fNum").value);
+                var y=parseFloat(document.getElementById("sNum").value);
+                var z=parseFloat(document.getElementById("tNum").value);
+                
+                if (x>y && x>z) {
+                    document.getElementById("demo").value=x;
+                } else if (y>z && y>x)
+                     document.getElementById("demo").value=y;
+                    else{
+                     document.getElementById("demo").value=z;
+                    }
+                } 
+            </script>
+    </head>
+    <body>
+        <label for="fNum">First Number:</label>
+        <input type="text" id="fNum" name="fNum">
+        <label for="sNum" >Second Number:</label>
+        <input type="text" id="sNum" name="sNum">
+        <label for="tNum">Third Number:</label>
+        <input type="text" id="tNum" name="tNum"><br><br>
+        <button type="button" onclick=compare()>compare</button><br><br>
+        <label for="demo">Bigger Of Given Numbers:</label>
+        <input type="text" id="demo">
+    </body>
+</html>

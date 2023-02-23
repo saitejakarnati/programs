@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Average of n Numbers</title>
+    </head>
+    <body>
+        <script>
+            var num,sum=0;
+            var n = prompt("Enter the number of Numbers:");
+            for(i=1; i<=n; i++) {
+                num = parseFloat(prompt("enter the number:")); 
+                document.write("enter number is:" + num + "<br>");
+                sum += num;
+                Avg = sum/n;
+            }
+            document.write("Average of given numbers is:" + Avg);
+         </script>
+    </body>
+</html>
