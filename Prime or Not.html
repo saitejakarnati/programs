@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime number</title>
+    </head>
+    <body>
+        <label for="Num">Enter a Number:</label>
+        <input type="text" id="Num" name="Num">
+        <button type="button" onclick=myFunction()>check</button><br>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+                var x=parseInt(document.getElementById("Num").value);
+                if(x==1){
+                    document.getElementById("demo").innerHTML= "It is Not a Prime";
+                }else if(x>1){
+                    if(x==2){
+                        document.getElementById("demo").innerHTML= "It is a Prime";
+                    }else{
+                    for(var i=2; i<x; i++ ){
+                        if (x%i==0){
+                        document.getElementById("demo").innerHTML= "It is Not a Prime";
+                        break;
+                    }else {
+                        document.getElementById("demo").innerHTML= "It is a Prime";
+                    }
+                    }
+                }
+                }
+            }
+        </script>
+    </body>
+</html>
