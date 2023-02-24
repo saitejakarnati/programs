@@ -1,0 +1,10 @@
+function sum(a,b) {
+    for(i=0;i<a.length;i++){
+        for(j=0;J<b.length;j++){
+            
+            a[i][j]+b[i][j]
+        }
+    }
+    return c[i][j]
+}
+sum([1,2],[2,3]);
