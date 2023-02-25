@@ -1,10 +1,16 @@
-function sum(a,b) {
-    for(i=0;i<a.length;i++){
-        for(j=0;J<b.length;j++){
-            
-            a[i][j]+b[i][j]
-        }
+function array2d(a) {
+    let x = []
+    for (let i = 0; i < a; i++) {
+
+        x[i] = []
     }
-    return c[i][j]
+
+    return x
 }
-sum([1,2],[2,3]);
+let l = array2d(2)
+m = array2d(3)
+n = [l, m]
+
+console.log(l)
+console.log(m)
+console.log(n)
