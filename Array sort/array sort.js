@@ -1,14 +1,11 @@
-function sortarray(arr) {                  // Sort Alphabetically
-    return arr.sort()
-}
-function sortarray1(arr) {                 // Sort Numerically
-    return arr.sort(function (a, b) {
-        return a - b
-    })
+function sortarray(arr) {
+    for(let i=0;i<arr.length-1;i++){
+        if(arr[i]>arr[i+1]) {
+            arr[i]=arr[i+1]
+            arr[i+1]=arr[i]
+        }
+    }
+    return console.log(arr)
 }
 
-let x = sortarray([1, 23, 25, 47, 41, 3, 65, 56, 4, 6, 7])
-console.log(x)
-
-let y = sortarray1([1, 23, 25, 47, 41, 3, 65, 56, 4, 6, 7])
-console.log(y)
+sortarray([1,3,2,5,7,10,23,45,4,6])
