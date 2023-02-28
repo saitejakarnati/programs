@@ -1,10 +1,15 @@
 function sortarray(arr) {
-    for(let i=0;i<arr.length-1;i++){
-        if(arr[i]>arr[i+1]) {
-            arr[i]=arr[i+1]
+    let i = 0, j = i + 1
+    for (i = 0; i < arr.length - 1; i++) {
+        for (j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                subarr = arr[i]
+                arr[i] = arr[j]
+                arr[j] = subarr
+            }
         }
     }
     return console.log(arr)
 }
 
-sortarray([1,3,2,5,7,10,23,45,4,6])
+sortarray([5, 1, 2, 7, 4, 6, -6, -20, 0, 12, 35, 23, 456, 33, 234, -9])
