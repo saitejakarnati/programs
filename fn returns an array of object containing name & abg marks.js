@@ -5,11 +5,10 @@ function students(name, age, marks, name1, age1, marks1) {
             name: name,
             age: age,
             avgmarks: function () {
-                let sum = 0
+                let x = 0
                 let n = marks.length
                 for (i = 0; i < n; i++)
-                    sum += marks[i]
-                x = sum / n
+                    x += marks[i] / n
                 return x
             }
         },
@@ -17,11 +16,10 @@ function students(name, age, marks, name1, age1, marks1) {
             name: name1,
             age: age1,
             avgmarks: function () {
-                let sum = 0
+                let x = 0
                 let n = marks1.length
                 for (i = 0; i < n; i++)
-                    sum += marks1[i]
-                x = sum / n
+                    x += marks1[i] / n
                 return x
             }
 
