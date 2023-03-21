@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 10px;
+
+    }
+</style>
+<body>
+    <h1 style="text-align:center;">Students List</h1>
+    
+    <table style="width:100%">
+        <tr>
+            <th>Student Name</th>
+            <th>Roll NO</th>
+            <th>City</th>
+        </tr>
+        <tbody id="mytable">
+
+        </tbody>
+    </table>
+
+    <script>
+        let Students = [
+            {
+                name: "Sai", rollno: 1220, city: "Hyderabad"
+            },
+            {
+                name: "Saisree", rollno: 1221, city: "Bengaluru"
+
+            },
+            {
+                name: "Raju", rollno: 1222, city: "Gujarath"
+
+            },
+            {
+                name: "satish", rollno: 1223, city: "Nalgonda"
+            }
+        ];
+        buildTable(Students)
+        function buildTable(data) {
+
+            for (i = 0; i < data.length; i++) {
+                let x = `<tr>
+                    <td>${data[i].name}</td>
+                    <td>${data[i].rollno}</td>
+                    <td>${data[i].city}</td>
+                </tr>`
+                document.getElementById("mytable").innerHTML += x
+            }
+        }
+    </script>
+</body>
+
+</html>
