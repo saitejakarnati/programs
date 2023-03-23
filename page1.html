@@ -48,7 +48,10 @@
                 name: "satish", rollno: 1223, city: "Nalgonda"
             }
         ];
-        
+        Students.push({
+            name: localStorage.getItem("name"),
+            rollno: localStorage.getItem("rollno"), city: localStorage.getItem("city")
+        });
         buildTable(Students);
         function buildTable(data) {
             for (i = 0; i < data.length; i++) {
