@@ -14,8 +14,10 @@
 
     }
 </style>
+
 <body>
     <h1 style="text-align:center;">Students List</h1>
+   
     
     <table style="width:100%">
         <tr>
@@ -26,7 +28,8 @@
         <tbody id="mytable">
 
         </tbody>
-    </table>
+    </table><br><br>
+    <button type="button" onclick='myfunction2()'>Add Student </button>
 
     <script>
         let Students = [
@@ -45,17 +48,20 @@
                 name: "satish", rollno: 1223, city: "Nalgonda"
             }
         ];
-        buildTable(Students)
+        
+        buildTable(Students);
         function buildTable(data) {
             for (i = 0; i < data.length; i++) {
                 let x = `<tr>
-                    <td>${data[i].name}</td>
+                   <td>${data[i].name}</td>
                     <td>${data[i].rollno}</td>
                     <td>${data[i].city}</td>
                 </tr>`
                 document.getElementById("mytable").innerHTML += x
-            }
-        }
+            };
+        };
+        
+
     </script>
 </body>
 
