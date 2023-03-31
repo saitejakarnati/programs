@@ -14,6 +14,7 @@
 
     }
 </style>
+
 <body>
     <h1 style="text-align:center;">Students List</h1>
     <table style="width:100%">
@@ -27,6 +28,12 @@
     </table>
     <p><a href="file:///home/sai/Desktop/sai/programs/page2.html" target="_blank">Add Student</a></p>
     <script>
+
+        function deleteRow(r) {
+            let j = r.parentNode.parentNode.rowIndex;
+            document.getElementById("myTable").deleteRow(j - 1);
+        };
+
         let Students = JSON.parse(localStorage.getItem("rollno"))
         let table = document.getElementById("myTable");
         for (i = 0; i < Students.length; i++) {
@@ -34,10 +41,14 @@
             let cell1 = row.insertCell(0);
             let cell2 = row.insertCell(1);
             let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
 
             cell1.innerHTML = Students[i].name;
             cell2.innerHTML = Students[i].rollno;
             cell3.innerHTML = Students[i].city;
+            cell4.innerHTML = '<input type="button" value="Delete" onclick="deleteRow(this);"/>';
+
+
         };
 
     </script>
