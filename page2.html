@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <h1 style="text-align:center;">New Student Details</h1><br><br>
 </head>
 
 <body>
     <div style="text-align:center;">
-    <form>
-        <label for="name">Student Name:</label>
-        <input type="text" id="name"><br><br>
-        <label for="rollno">Roll NO:</label>
-        <input type="text" id="rollno"><br><br>
-        <label for="city">City:</label>
-        <input type="text" id="city"><br><br>
-        <button type="submit" onclick="myfunction1()">Submit</button>
-    </form>
+        <form>
+            <label for="name">Student Name:</label>
+            <input type="text" id="name"><br><br>
+            <label for="rollno">Roll NO:</label>
+            <input type="text" id="rollno"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city"><br><br>
+            <button type="submit" onclick="savedata()">Submit</button>
+        </form>
     </div>
     <script>
-        function myfunction1() {
-            let name = document.getElementById("name").value
-            let rollno = document.getElementById("rollno").value
-            let city = document.getElementById("city").value
-            localStorage.setItem("name", name);
-            localStorage.setItem("rollno", rollno);
-            localStorage.setItem("city", city);
+        function savedata() {
+            students = JSON.parse(localStorage.getItem("rollno")) ? JSON.parse(localStorage.getItem("rollno")) : [];
+            students.push({
+                name: document.getElementById("name").value,
+                rollno: document.getElementById("rollno").value,
+                city: document.getElementById("city").value
+            });
+            localStorage.setItem("rollno", JSON.stringify(students));
         }
     </script>
 </body>

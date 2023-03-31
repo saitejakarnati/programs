@@ -17,8 +17,6 @@
 
 <body>
     <h1 style="text-align:center;">Students List</h1>
-   
-    
     <table style="width:100%">
         <tr>
             <th>Student Name</th>
@@ -26,33 +24,12 @@
             <th>City</th>
         </tr>
         <tbody id="mytable">
-
         </tbody>
     </table><br><br>
-    <button type="button" onclick='myfunction2()'>Add Student </button>
-
+    <p><a href="file:///home/sai/Desktop/sai/programs/page2.html" target="_blank">Add Student</a></p>
     <script>
-        let Students = [
-            {
-                name: "Sai", rollno: 1220, city: "Hyderabad"
-            },
-            {
-                name: "Saisree", rollno: 1221, city: "Bengaluru"
-
-            },
-            {
-                name: "Raju", rollno: 1222, city: "Gujarath"
-
-            },
-            {
-                name: "satish", rollno: 1223, city: "Nalgonda"
-            }
-        ];
-        Students.push({
-            name: localStorage.getItem("name"),
-            rollno: localStorage.getItem("rollno"), city: localStorage.getItem("city")
-        });
-        buildTable(Students);
+        let students = JSON.parse(localStorage.getItem("rollno"))
+        buildTable(students);
         function buildTable(data) {
             for (i = 0; i < data.length; i++) {
                 let x = `<tr>
@@ -60,12 +37,11 @@
                     <td>${data[i].rollno}</td>
                     <td>${data[i].city}</td>
                 </tr>`
-                document.getElementById("mytable").innerHTML += x
+                document.getElementById("mytable").innerHTML += x;
             };
         };
-        
-
     </script>
 </body>
+
 
 </html>
