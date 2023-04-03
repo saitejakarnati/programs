@@ -26,7 +26,7 @@
         <tbody id="mytable">
         </tbody>
     </table><br><br>
-    <p><a href="file:///home/sai/Desktop/sai/programs/page2.html" target="_blank">Add Student</a></p>
+    <p><a href="file:///home/sai/Downloads/sai/programs-1/student%20list%20web%20application/page2.html" target="_blank">Add Student</a></p>
     <script>
         let students = JSON.parse(localStorage.getItem("rollno"))
         buildTable(students);
@@ -41,9 +41,9 @@
                 document.getElementById("mytable").innerHTML += x;
             };
         };
-        function deleteRow() {
+        function deleteRow(r) {
             var j = r.parentNode.parentNode.rowIndex;
-            document.getElementById("myTable").deleteRow();
+            document.getElementById("myTable").deleteRow(j);
         }
     </script>
 </body>
