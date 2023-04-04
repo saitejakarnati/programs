@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1 style="text-align:center;">New Student Details</h1><br><br>
+</head>
+
+<body>
+    <div style="text-align:center;">
+        <form action="file:///home/sai/Downloads/sai/programs/students%20web%20app3/page1.html" method="get">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name"><br><br>
+            <label for="rollno">Roll NO:</label>
+            <input type="text" id="rollno"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city"><br><br>
+            <button type="submit" onclick="savedata()">Submit</button>
+            <button type="button" onclick="cleardata()">Clear</button>
+        </form>
+    </div>
+    <script>
+        function savedata() {
+            students = JSON.parse(localStorage.getItem("rollno")) ? JSON.parse(localStorage.getItem("rollno")) : [];
+            students.push({
+                name: document.getElementById("name").value,
+                rollno: document.getElementById("rollno").value,
+                city: document.getElementById("city").value
+            });
+            localStorage.setItem("rollno", JSON.stringify(students));
+        };
+        
+        function cleardata() {
+            localStorage.clear()
+        }
+    </script>
+</body>
+
+</html>
