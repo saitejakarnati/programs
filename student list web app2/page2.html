@@ -29,16 +29,6 @@
                 "city": city
             }
             localStorage.setItem(rollno = document.getElementById("rollno").value, JSON.stringify(students));
-            
-            var url = new URL('file:///home/sai/Downloads/sai/programs/student%20list%20web%20app2/page1.html')
-            var search_params = url.searchParams
-            search_params.set('name', name)
-            search_params.set('rollno', rollno)
-            search_params.set('city', city)
-            url.search = search_params.toString()
-            var new_url = url.toString()
-            
-            console.log(new_url)
         };
 
         function cleardata() {

@@ -41,21 +41,18 @@
             let cell3 = row.insertCell(2);
             let cell4 = row.insertCell(3);
 
-            cell1.innerHTML = '<a href="#">Students[i].name</a>';
-            cell2.innerHTML = Students[i].rollno;
-            cell3.innerHTML = Students[i].city;
+            cell1.innerHTML = `<a href="file:///home/sai/Downloads/sai/programs/student%20list%20web%20app2/page4.html?name=${Students[i].name}&rollno=${Students[i].rollno}&city=${Students[i].city}" >${Students[i].name}</a>`;
+            cell2.innerHTML = `${Students[i].rollno}`;
+            cell3.innerHTML = `${Students[i].city}`;
             cell4.innerHTML = '<input type="button" value="Delete" onclick="deleteRow(i);"/>';
 
-
         };
+
 
         function deleteRow(key) {
             localStorage.removeItem(key);
             window.location.reload();
         };
-        console.log(window.location.search)
-
-
     </script>
 </body>
 
