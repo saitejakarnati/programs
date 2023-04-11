@@ -14,12 +14,18 @@
             <input type="text" id="rollno"><br><br>
             <label for="city">City:</label>
             <input type="text" id="city"><br><br>
-            <button type="submit" onclick="savedata()">Submit</button>
-            <button type="button" onclick="cleardata()">Clear Storage</button>
+            <button type="submit" onclick="updateData()">Update</button>
+            <button type="button" onclick="cleardata()">Clear</button>
         </form>
     </div>
     <script>
-        function savedata() {
+        queryString = window.location.search;
+        urlParams = new URLSearchParams(queryString);
+        rollno = urlParams.get('rollno')
+        document.getElementById("name").value = (JSON.parse(localStorage.getItem(rollno))).name
+        document.getElementById("rollno").value = (JSON.parse(localStorage.getItem(rollno))).rollno
+        document.getElementById("city").value = (JSON.parse(localStorage.getItem(rollno))).city
+        function updateData() {
             name = document.getElementById("name").value;
             rollno = document.getElementById("rollno").value;
             city = document.getElementById("city").value;
@@ -32,12 +38,12 @@
         };
 
         function cleardata() {
-            localStorage.clear()
+            document.getElementById("name").value = ""
+            document.getElementById("rollno").value = ""
+            document.getElementById("city").value = ""
         }
-        function Editdata(name, rollno, city) {
-            document.getElementById("name").value = Students.name
-            document.getElementById("rollno").value = rollno
-        }
+
+
     </script>
 </body>
 

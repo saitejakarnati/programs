@@ -10,7 +10,7 @@
         <p id="name"></p><br>
         <p id="rollno"></p><br>
         <p id="city"></p><br>
-        <button type="button">Edit</button>
+        <p id="link"></p>
         <script>
             queryString = window.location.search;
             urlParams = new URLSearchParams(queryString);
@@ -21,6 +21,7 @@
             document.getElementById("name").innerHTML = "Student Name:" + " " + name;
             document.getElementById("rollno").innerHTML = "Student Name:" + " " + rollno;
             document.getElementById("city").innerHTML = "Student Name:" + " " + city;
+            document.getElementById("link").innerHTML = `<a href="file:///home/sai/Downloads/sai/programs/student%20list%20web%20app2/page5.html?rollno=${rollno}">Edit</a>`;
         </script>
     </div>
 </body>
