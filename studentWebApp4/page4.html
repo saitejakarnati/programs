@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1 style="text-align:center;">New Student Details</h1><br><br>
+</head>
+
+<body>
+    <div style="text-align:center;">
+        <form action="file:///home/sai/Downloads/sai/programs/student%20list%20web%20app2/page1.html" method="get">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name"><br><br>
+            <label for="rollno">Roll NO:</label>
+            <input type="text" id="rollno"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city"><br><br>
+            <button type="submit" onclick="updateData()">Update</button>
+            <button type="button" onclick="cleardata()">Clear</button>
+        </form>
+    </div>
+    <script>
+        queryString = window.location.search;
+        urlParams = new URLSearchParams(queryString);
+        document.getElementById("name").value = urlParams.get('name');
+        document.getElementById("rollno").value = urlParams.get('rollno');
+        document.getElementById("city").value = urlParams.get('city');
+        function updateData() {
+            name = document.getElementById("name").value;
+            rollno = document.getElementById("rollno").value;
+            city = document.getElementById("city").value;
+            students = {
+                "name": name,
+                "rollno": rollno,
+                "city": city
+            }
+            localStorage.setItem(rollno = document.getElementById("rollno").value, JSON.stringify(students));
+        };
+
+        function cleardata() {
+            document.getElementById("name").value = "";
+            document.getElementById("rollno").value = "";
+            document.getElementById("city").value = "";
+        }
+
+
+    </script>
+</body>
+
+</html>

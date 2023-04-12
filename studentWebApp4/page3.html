@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1 style="text-align:center;">Student Full Details</h1><br><br>
+</head>
+
+<body>
+    <div style="text-align:center;">
+        <p id="name"></p><br>
+        <p id="rollno"></p><br>
+        <p id="city"></p><br>
+        <p id="link"></p>
+        <script>
+            queryString = window.location.search;
+            urlParams = new URLSearchParams(queryString);
+            name = urlParams.get('name');
+            rollno = urlParams.get('rollno');
+            city = urlParams.get('city');
+
+            document.getElementById("name").innerHTML = "Student Name:" + " " + name;
+            document.getElementById("rollno").innerHTML = "Student Name:" + " " + rollno;
+            document.getElementById("city").innerHTML = "Student Name:" + " " + city;
+            document.getElementById("link").innerHTML = `<a href="file:///home/sai/Downloads/sai/programs/studentWebApp4/page4.html?name=${name}&rollno=${rollno}&city=${city}">Edit</a>`;
+        </script>
+    </div>
+</body>
+
+</html>
