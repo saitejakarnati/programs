@@ -47,8 +47,6 @@
             cell4.innerHTML = '<input type="button" value="Delete" onclick="deleteRow(i);"/>';
 
         };
-
-
         function deleteRow(key) {
             localStorage.removeItem(key);
             window.location.reload();
