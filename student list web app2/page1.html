@@ -31,7 +31,7 @@
     <script>
         Students = [];
         for (var key in localStorage) {
-            Students.push(JSON.parse(localStorage.getItem(key)))
+            Students.push(JSON.parse(localStorage.getItem(key)));
         }
         let table = document.getElementById("myTable");
         for (i = 0; i < localStorage.length; i++) {

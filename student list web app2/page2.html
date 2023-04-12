@@ -19,6 +19,7 @@
         </form>
     </div>
     <script>
+       
         function savedata() {
             name = document.getElementById("name").value;
             rollno = document.getElementById("rollno").value;
@@ -29,14 +30,9 @@
                 "city": city
             }
             localStorage.setItem(rollno = document.getElementById("rollno").value, JSON.stringify(students));
-        };
-
-        function cleardata() {
-            localStorage.clear()
         }
-        function Editdata(name, rollno, city) {
-            document.getElementById("name").value = Students.name
-            document.getElementById("rollno").value = rollno
+        function cleardata() {
+            localStorage.clear();
         }
     </script>
 </body>

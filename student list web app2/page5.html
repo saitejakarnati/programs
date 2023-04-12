@@ -21,10 +21,10 @@
     <script>
         queryString = window.location.search;
         urlParams = new URLSearchParams(queryString);
-        rollno = urlParams.get('rollno')
-        document.getElementById("name").value = (JSON.parse(localStorage.getItem(rollno))).name
-        document.getElementById("rollno").value = (JSON.parse(localStorage.getItem(rollno))).rollno
-        document.getElementById("city").value = (JSON.parse(localStorage.getItem(rollno))).city
+        rollno = urlParams.get('rollno');
+        document.getElementById("name").value = (JSON.parse(localStorage.getItem(rollno))).name;
+        document.getElementById("rollno").value = (JSON.parse(localStorage.getItem(rollno))).rollno;
+        document.getElementById("city").value = (JSON.parse(localStorage.getItem(rollno))).city;
         function updateData() {
             name = document.getElementById("name").value;
             rollno = document.getElementById("rollno").value;
@@ -38,12 +38,10 @@
         };
 
         function cleardata() {
-            document.getElementById("name").value = ""
-            document.getElementById("rollno").value = ""
-            document.getElementById("city").value = ""
+            document.getElementById("name").value = "";
+            document.getElementById("rollno").value = "";
+            document.getElementById("city").value = "";
         }
-
-
     </script>
 </body>
 
