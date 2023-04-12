@@ -33,7 +33,6 @@
         for (var key in localStorage) {
             students.push(JSON.parse(localStorage.getItem(key)));
         }
-
         buildTable(students);
         function buildTable(data) {
             for (i = 0; i < data.length; i++) {
@@ -48,7 +47,6 @@
         };
         function deleteRow(key) {
             localStorage.removeItem(key);
-
         }
 
     </script>

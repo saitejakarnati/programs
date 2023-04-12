@@ -4,7 +4,6 @@
 <head>
     <h1 style="text-align:center;">Student Full Details</h1><br><br>
 </head>
-
 <body>
     <div style="text-align:center;">
         <p id="name"></p><br>
@@ -19,8 +18,8 @@
             city = urlParams.get('city');
 
             document.getElementById("name").innerHTML = "Student Name:" + " " + name;
-            document.getElementById("rollno").innerHTML = "Student Name:" + " " + rollno;
-            document.getElementById("city").innerHTML = "Student Name:" + " " + city;
+            document.getElementById("rollno").innerHTML = "Roll No:" + " " + rollno;
+            document.getElementById("city").innerHTML = "City:" + " " + city;
             document.getElementById("link").innerHTML = `<a href="file:///home/sai/Downloads/sai/programs/student%20list%20web%20app2/page5.html?rollno=${rollno}">Edit</a>`;
         </script>
     </div>
